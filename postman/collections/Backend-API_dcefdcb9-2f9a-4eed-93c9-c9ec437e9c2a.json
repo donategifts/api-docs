@@ -27,8 +27,7 @@
 							},
 							{
 								"key": "X-Auth-Token-Type",
-								"value": "user",
-								"type": "text"
+								"value": "user"
 							}
 						],
 						"url": {
@@ -43,7 +42,6 @@
 								{
 									"key": "X-Auth-Token-Type",
 									"value": "user",
-									"type": "text",
 									"disabled": true
 								}
 							]
@@ -70,8 +68,7 @@
 							},
 							{
 								"key": "X-Auth-Token-Type",
-								"value": "user",
-								"type": "text"
+								"value": "user"
 							}
 						],
 						"body": {
@@ -114,8 +111,7 @@
 							},
 							{
 								"key": "X-Auth-Token-Type",
-								"value": "user",
-								"type": "text"
+								"value": "user"
 							}
 						],
 						"body": {
@@ -166,6 +162,79 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "agency",
+			"item": [
+				{
+					"name": "Gets the agency for the currently logged in user",
+					"id": "871f3c83-247f-45b6-a646-1182aa320d35",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Auth-Token-Type",
+								"value": "user"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/agency",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create agency",
+					"id": "50276e9b-f2a1-43a5-947d-e82baeff13eb",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Auth-Token-Type",
+								"value": "user"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"in culpa consequat laborum voluptate\",\n  \"phone\": \"sit\",\n  \"website\": \"Ut esse\",\n  \"address\": {\n    \"street\": \"sed enim\",\n    \"streetNumber\": \"incidid\",\n    \"additionalAddress\": \"fugiat dolore sint\",\n    \"zipcode\": \"aliqua laboris ut pariatur\",\n    \"city\": \"consequat elit anim pariatur\",\n    \"country\": \"irure ea nostrud cillum\",\n    \"state\": \"Duis ipsum anim\"\n  },\n  \"bio\": \"enim do\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/agency",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agency"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "8fa0d10d-bdd4-433c-8619-4c325ff16b8a"
 		}
 	],
 	"event": [
@@ -414,28 +483,24 @@
 	],
 	"variable": [
 		{
-			"id": "68973d43-392b-4361-98f3-34dc9f63bfcf",
+			"id": "f330cc4f-1fea-496e-b17f-d34e72b01fc9",
 			"key": "baseUrl",
-			"value": "",
-			"type": "string"
+			"value": "https://ts-backend-dev-vbamtom7tq-uc.a.run.app/"
 		},
 		{
-			"id": "d3ea5e0b-b649-472d-92a7-8a5024147c96",
+			"id": "64360fd5-5029-4336-b67a-3dbac27867a3",
 			"key": "firebase_apiKey",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "ff27ef31-f4cd-4951-b165-3a1797cc0280",
+			"id": "9949d0e9-8d39-499a-ae59-cd50cb2fb88c",
 			"key": "firebase_test_user",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "7cbdc82e-f3e9-4729-8c57-ac4412d11602",
+			"id": "88fb4f8a-7c32-4b3c-b2a5-54d933fe0b71",
 			"key": "firebase_test_password",
-			"value": "",
-			"type": "string"
+			"value": ""
 		}
 	]
 }
