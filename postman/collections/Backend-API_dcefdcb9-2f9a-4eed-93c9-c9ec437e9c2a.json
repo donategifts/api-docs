@@ -241,7 +241,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "7e35420b-d0af-4782-9a66-0a5f26bed418",
+				"id": "46ed0059-70e4-4399-8004-f61dbbecb62d",
 				"type": "text/javascript",
 				"exec": [
 					"const { Header, Response, HeaderList } = require('postman-collection');",
@@ -473,7 +473,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "a963ec41-a75d-41d9-a5cc-f1d0e1e1230b",
+				"id": "a0fa2172-ba40-4100-badb-34a0a9a1043d",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -483,22 +483,22 @@
 	],
 	"variable": [
 		{
-			"id": "f330cc4f-1fea-496e-b17f-d34e72b01fc9",
+			"id": "356f37e5-69ba-4e79-8152-2fb57b33c4ea",
 			"key": "baseUrl",
 			"value": "https://ts-backend-dev-vbamtom7tq-uc.a.run.app/"
 		},
 		{
-			"id": "64360fd5-5029-4336-b67a-3dbac27867a3",
+			"id": "d23227be-59b4-4310-8c1f-a43e8f94d647",
 			"key": "firebase_apiKey",
 			"value": ""
 		},
 		{
-			"id": "9949d0e9-8d39-499a-ae59-cd50cb2fb88c",
+			"id": "b6b38a51-aeee-4540-8328-09e1000f5174",
 			"key": "firebase_test_user",
 			"value": ""
 		},
 		{
-			"id": "88fb4f8a-7c32-4b3c-b2a5-54d933fe0b71",
+			"id": "dd056e6b-0fdf-431a-9a4f-db37fec2d919",
 			"key": "firebase_test_password",
 			"value": ""
 		}
