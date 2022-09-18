@@ -4,7 +4,7 @@ info:
   title: 'Backend'
   description: Donate gifts backend
 servers:
-  - url: https://ts-backend-dev-vbamtom7tq-uc.a.run.app/
+  - url: https://ts-backend-dev-vbamtom7tq-uc.a.run.app
     description: dev server
 
 paths:
@@ -133,6 +133,70 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /agency/addresses:
+    get:
+      summary: Gets all addresses of an agency of the logged in user
+      responses:
+        '200':
+          description: the addresses or nothing if no address exists
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Address'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /address/{id}:
+    get:
+      summary: Gets the address
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: UUID of the address to get
+      responses:
+        '200':
+          description: the address or nothing if no address exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Address'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /address:
+    post:
+      summary: Creates an address
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/Address'
+      responses:
+        '200':
+          description: the address or nothing if no address exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Address'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     User:
@@ -171,6 +235,8 @@ components:
     Address:
       type: object
       properties:
+        id:
+          type: string
         street:
           type: string
         streetNumber:
@@ -185,6 +251,13 @@ components:
           type: string
         state:
           type: string
+      required:
+        - street
+        - streetNumber
+        - city
+        - country
+        - state
+        - zipcode
     Error:
       type: object
       required:

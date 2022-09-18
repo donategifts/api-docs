@@ -232,9 +232,115 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Gets all addresses of an agency",
+					"id": "85ed2d1a-4207-48b1-90a4-42bd4229636f",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Auth-Token-Type",
+								"value": "user",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/agency/addresses",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agency",
+								"addresses"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "8fa0d10d-bdd4-433c-8619-4c325ff16b8a"
+		},
+		{
+			"name": "address",
+			"item": [
+				{
+					"name": "Gets the address",
+					"id": "43d4689a-ca82-44fd-8787-4d5070fbc8e3",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/address/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"address",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "aliqua elit amet",
+									"description": "(Required) UUID of the address to get"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Creates an address",
+					"id": "6e8a3c4e-92df-4617-8fa9-3b8e22e31920",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Auth-Token-Type",
+								"value": "user"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"street\": \"hubba bubba\",\n  \"streetNumber\": \"24\",\n  \"city\": \"atlantis\",\n  \"country\": \"somewhere in the ocean\",\n  \"state\": \"camel country\",\n  \"zipcode\": \"67589\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/address",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"address"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "5ab6fd12-fdca-440f-8ab5-a9960ece0aa9"
 		}
 	],
 	"event": [
@@ -483,22 +589,22 @@
 	],
 	"variable": [
 		{
-			"id": "356f37e5-69ba-4e79-8152-2fb57b33c4ea",
+			"id": "08ddeeff-2e95-461a-907b-0e2e8914b010",
 			"key": "baseUrl",
-			"value": "https://ts-backend-dev-vbamtom7tq-uc.a.run.app/"
+			"value": "https://ts-backend-dev-vbamtom7tq-uc.a.run.app"
 		},
 		{
-			"id": "d23227be-59b4-4310-8c1f-a43e8f94d647",
+			"id": "16331871-275e-46fd-bb0d-fb25e83ddf3b",
 			"key": "firebase_apiKey",
 			"value": ""
 		},
 		{
-			"id": "b6b38a51-aeee-4540-8328-09e1000f5174",
+			"id": "aa86fb9e-47e7-448d-8cfe-e633aec5a131",
 			"key": "firebase_test_user",
 			"value": ""
 		},
 		{
-			"id": "dd056e6b-0fdf-431a-9a4f-db37fec2d919",
+			"id": "d8923d65-7974-4383-ab79-4027abd8386d",
 			"key": "firebase_test_password",
 			"value": ""
 		}
