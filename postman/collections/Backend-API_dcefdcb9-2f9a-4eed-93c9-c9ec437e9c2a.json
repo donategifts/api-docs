@@ -245,8 +245,7 @@
 							},
 							{
 								"key": "X-Auth-Token-Type",
-								"value": "user",
-								"type": "text"
+								"value": "user"
 							}
 						],
 						"url": {
@@ -341,6 +340,53 @@
 				}
 			],
 			"id": "5ab6fd12-fdca-440f-8ab5-a9960ece0aa9"
+		},
+		{
+			"name": "card",
+			"item": [
+				{
+					"name": "Creates a card",
+					"id": "74c1d547-503c-455c-b8b3-dce042bc9d8f",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Auth-Token-Type",
+								"value": "user",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"CHILD\",\n  \"status\": \"PUBLISHED\",\n  \"itemUrl\": \"https://www.amazon.com/-/de/dp/B07VZF7X31/ref=sr_1_5?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=33UDPB7O7BMSQ&keywords=bubble+maker&qid=1663523439&sprefix=bubble+make%2Caps%2C617&sr=8-5\",\n  \"itemPrice\": 24.99,\n  \"addressId\": \"7b21b6ee-f366-4286-a143-8ee416f92cc0\",\n  \"firstName\": \"dolores\",\n  \"images\": [\n    {\n      \"path\": \"http://banana.de/1.jpg\",\n      \"isMainImage\": false\n    },\n    {\n      \"path\": \"http://banana.de/2.jpg\",\n      \"isMainImage\": true\n    }\n  ],\n  \"birthday\": \"2022-09-18T13:56:42.121Z\",\n  \"gender\": \"FEMALE\",\n  \"interest\": \"eating tree bark\",\n  \"bio\": \"found under a rock in new zealand\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/card",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"card"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "f82bd84d-f71b-4236-85d2-2880ea67f820"
 		}
 	],
 	"event": [
@@ -589,22 +635,22 @@
 	],
 	"variable": [
 		{
-			"id": "08ddeeff-2e95-461a-907b-0e2e8914b010",
+			"id": "90f5c7c6-fdc1-4cc9-9efd-fcdd7f2f9a36",
 			"key": "baseUrl",
 			"value": "https://ts-backend-dev-vbamtom7tq-uc.a.run.app"
 		},
 		{
-			"id": "16331871-275e-46fd-bb0d-fb25e83ddf3b",
+			"id": "ae9e1a6c-94b6-47eb-b89d-0d48e18ddd19",
 			"key": "firebase_apiKey",
 			"value": ""
 		},
 		{
-			"id": "aa86fb9e-47e7-448d-8cfe-e633aec5a131",
+			"id": "95e8664c-b2fe-46d6-9b4a-3724cb006494",
 			"key": "firebase_test_user",
 			"value": ""
 		},
 		{
-			"id": "d8923d65-7974-4383-ab79-4027abd8386d",
+			"id": "a33cf416-ccec-4218-b98a-259f2ebcb303",
 			"key": "firebase_test_password",
 			"value": ""
 		}

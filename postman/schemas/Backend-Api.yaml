@@ -197,6 +197,29 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /card:
+    post:
+      summary: Creates a card
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/Card'
+      responses:
+        '200':
+          description: returns the created card
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     User:
@@ -258,6 +281,60 @@ components:
         - country
         - state
         - zipcode
+    Card:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum:
+            - "CHILD"
+        itemUrl:
+          type: string
+        itemPrice:
+          type: number
+        status:
+          type: string
+          enum:
+            - "DRAFT"
+            - "PUBLISHED"
+            - "DONATED"
+        addressId:
+          type: string
+        birthday:
+          type: string
+        gender:
+          type: string
+          enum:
+            - "MALE"
+            - "FEMALE"
+        firstName:
+          type: string
+        interest:
+          type: string
+        bio:
+          type: string
+        images:
+          type: array
+          items:
+            type: object
+            properties:
+              path: 
+                type: string
+              isMainImage:
+                type: boolean
+            required:
+              - path
+              - isMainImage
+      required:
+        - type
+        - status
+        - itemUrl
+        - itemPrice
+        - addressId
+        - firstName
+        - images
     Error:
       type: object
       required:
